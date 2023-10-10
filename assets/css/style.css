@@ -228,7 +228,7 @@ h6 {
   }
 
   .navbar svg{
-    fill:#575757dd;
+    fill: #313131;
   }
 }
 
@@ -767,7 +767,7 @@ section {
   }
 
   #Projects .col-sm-8 {
-    padding: 40px;
+    padding: 20px;
     height: auto;
   }
 }
@@ -905,7 +905,6 @@ padding-top: 20px;
   text-align: center;
   display: block;
 }
-
 
 /*--------------------------------------------------------------
 # Event
@@ -1081,47 +1080,100 @@ line-height: 78.682%; /* 19.67px */
   #Events {
     height: auto;
   }
-  
-  #Events .carousel-item img{
+
+  #Events .carousel-item img {
     height: auto;
     width: 100%;
     background-size: cover;
     position: relative;
     z-index: -1;
   }
-  #Events .col-sm-4{
+  #Events .carousel-caption{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+   z-index: 1;
+    width: 100%;
+    padding: 15px;
+    text-align: center;
+    border: none;
+    padding-left: 40px;
+    padding-bottom: 60px;
+  }
+  #Events .carousel-caption h2{
+    font-size: 24px;
+    width: 200px;
+    padding-top: 102px;
+    text-align: left;
+    top: 100px;
+  }
+  #Events .carousel-caption h3{
+    font-size: 16px;
+    padding-top:30px;
+    padding-bottom: 0%;
+    text-align: left;
+  }
+  #Events .carousel-caption h4{
+    font-size: 16px;
+    padding-top: 0%;
+    text-align: left;
+    width: 65%;
+  }
+  #Events .carousel-caption p{
+    font-size: 16px;
+    padding-top: 0%;
+    text-align: left;
+  }
+  #Events .carousel-caption .buy-button {
+    position: absolute;
+    bottom: 60px; 
+    left: 300px; 
+    width: 100px;
+    height:40px;
+    padding: 15px 10px;
+   
+  }
+  #Events .carousel-caption .buy-button  a{
+    color: #FFF;
+    font-size: 12px; /* Adjust the font size as needed */
+    font-weight: 700;
+    display: block;
+    position: relative;
+    font-style: normal;
+  }
+  #Events .col-sm-4 {
     padding: 20px;
     height: auto;
   }
-  #Events .col-sm-8{
-  
+
+  #Events .col-sm-8 {
     height: auto;
   }
 
   #Events .col-sm-4 .typography {
     margin: 0;
     padding: 20px;
-    
   }
 
-  #Events .col-sm-4 .typography h1{
+  #Events .col-sm-4 .typography h1 {
     font-size: 40px;
-    
   }
 
-  
   #Events .col-sm-4 .typography p {
     margin: 0;
     font-size: 15px;
     padding-bottom: 20px;
     width: 100%;
   }
+
   #Events .carousel-indicators {
     left: 20px;
-    bottom: 20px; 
+    bottom: 20px;
   }
-
 }
+
+
 
 
 /*--------------------------------------------------------------
