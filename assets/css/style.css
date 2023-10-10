@@ -279,7 +279,7 @@ h6 {
 .navbar-mobile a:hover,
 .navbar-mobile .active,
 .navbar-mobile li:hover > a {
-  color: #e43c5c;
+  color: #e4cb3c;
 }
 
 .navbar-mobile .getstarted,
@@ -436,6 +436,9 @@ h6 {
   z-index: 1; /* Ensure it's above other content */
   cursor: pointer;
 }
+#hero li svg path {
+  stroke: white;
+}
 
 
 @media (max-width: 768px) {
@@ -465,6 +468,10 @@ h6 {
     font-size: 15px;
     padding-bottom: 20px;
   }
+
+  #hero .li svg path {
+    stroke: #000000; /* Change this to your desired color for mobile */
+}
 }
 
 
@@ -556,18 +563,20 @@ section {
   text-align: left;
 }
 
-.orauk {
+.about .orauk {
   position: absolute;
   color: rgba(0, 0, 0, 0.02);
   font-family: Playfair Display SC;
-  font-size: 476px;
+  font-size: 356px;
   font-style: normal;
   font-weight: 900;
   line-height: 78.682%;
   text-transform: uppercase;
   padding-top: 150px;
-  margin-left: 250px;
-  max-width: 50%;
+  padding-left: 200px;
+  max-width: 100%;
+  margin-left: 245px;
+  padding-right: 0%;
 }
 
 #about .Findoutmore-btn {
@@ -607,7 +616,7 @@ section {
   }
 
   .about h2 {
-    font-size: 36px;
+    font-size: 50px;
   }
 
   .about h3 {
@@ -992,11 +1001,15 @@ padding-top: 20px;
   z-index: 0;
 }
 .carousel-indicators{
-  left: 500px;
-  bottom: 40px;
+  left: 400px;
+  bottom: 20px;
 }
 .carousel-caption{
   text-align: left;
+  padding-left: 20px;
+  top: 420px;
+  left: 50px;
+  border-left: #DCC54F 12px solid;
 }
 
 .carousel-caption h2{
@@ -1034,6 +1047,33 @@ font-weight: 400;
 line-height: 95.682%; /* 26.791px */
 border-bottom: #fff 2px solid;
 }
+
+
+.carousel-item .buy-button{
+  width: 240px;
+  height: 59px;
+  flex-shrink: 0;
+  border-radius: 0px 25px;
+  background: linear-gradient(180deg, #FFD600 0%, #FF800C 100%);
+ bottom:120px;
+ left: 500px;
+ padding: 15px 55px;
+ position: relative;
+}
+
+.carousel-item .buy-button a{
+  color: #FFF;
+text-align: center;
+font-family: Poppins;
+font-size: 20px;
+font-style: normal;
+font-weight: 700;
+line-height: 78.682%; /* 19.67px */
+}
+
+
+/* Additional styling for the vertical line */
+
 @media (max-width: 768px) {
     #Events .col-sm-4{
     padding: 20px;
@@ -1136,16 +1176,16 @@ margin-top: 50px;
 #Advertise .col {
 display: flex;
 }
-/* Add this CSS */
+
 
 #Advertise .button-container {
-
   justify-content: flex-end;
   align-items: center;
   height: 100%;
   padding-left: 150px;
   padding-top: 100px;
   width: 490px;
+  padding: 15px ;
 }
 
 #Advertise .button-container a {
@@ -1156,7 +1196,7 @@ display: flex;
   font-style: normal;
   font-weight: 700;
   line-height: 113.682%; /* 28.42px */
-  padding: 10px;
+  padding: 15px;
 }
 
 @media (max-width: 768px) {
@@ -1165,9 +1205,13 @@ display: flex;
     padding: 0px;
   }
 
+  #Advertise .col-md-12{
+  
+  }
   #Advertise .button-container{
     padding: 0px;
     padding-left: 50px;
+    bottom: 50px;
   }
   #Advertise .button-container a {
     color: #FFF;
@@ -1307,10 +1351,11 @@ width: 400px;
   .donate {
      flex-direction: column;
      height: auto;
+     padding: 20px;
     }
 
     .donate h2 {
-    font-size: 36px;
+    font-size: 46px;
   }
 
   .donate h3 {
@@ -1632,7 +1677,7 @@ padding: 15px;
   height: auto;
 }
   form {
-    width: 100%; /* Make the form full width on smaller screens */
+    width: 100%; 
   }
 
   .Subscribe .container h2{
@@ -1651,7 +1696,9 @@ padding: 15px;
   padding: 10px;
 }
 #Subscribe .grid-container a{
-  font-size: 12px;
+  font-size: 15px;
+  padding: 15px;
+  
 }
 #Subscribe .grid-container{
   width: 100%;
@@ -1666,6 +1713,7 @@ footer{
   width: 100%;
   bottom: 0;
   left: 0;
+  height: auto;
 }
 
 
@@ -1808,6 +1856,7 @@ footer .bottom-details .bottom_text{
 @media (max-width: 700px){
   footer{
     position: relative;
+    height: auto;
   }
   
   .content .top .logo-details{
