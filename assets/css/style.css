@@ -226,6 +226,10 @@ h6 {
   .navbar ul {
     display: none;
   }
+
+  .navbar svg{
+    fill:#575757dd;
+  }
 }
 
 .navbar-mobile {
@@ -685,11 +689,11 @@ section {
 
 #Projects .nav {
   border-bottom: #A5A7B7 4px solid;
-  color: #9F9F9F;
+ 
   margin-bottom: 20px;
 }
 
-#Projects .nav-item {
+#Projects .nav-item a {
   color: #9F9F9F;
   font-family: Poppins;
   font-size: 20px;
@@ -698,6 +702,7 @@ section {
   line-height: 113.682%; /* 28.42px */
   text-transform: capitalize;
   padding: 10px;
+  
 }
 
 #Projects .nav-item .active {
@@ -762,7 +767,7 @@ section {
   }
 
   #Projects .col-sm-8 {
-    padding: 20px;
+    padding: 40px;
     height: auto;
   }
 }
@@ -907,6 +912,7 @@ padding-top: 20px;
 #Events{
   padding: 0%;
   height: 100vh;
+  overflow: hidden; 
   }
   
   #Events .col-sm-4{
@@ -1048,17 +1054,16 @@ line-height: 95.682%; /* 26.791px */
 border-bottom: #fff 2px solid;
 }
 
-
 .carousel-item .buy-button{
   width: 240px;
   height: 59px;
   flex-shrink: 0;
   border-radius: 0px 25px;
   background: linear-gradient(180deg, #FFD600 0%, #FF800C 100%);
- bottom:120px;
- left: 500px;
- padding: 15px 55px;
- position: relative;
+  bottom:120px;
+  left: 500px;
+  padding: 15px 55px;
+  position: relative;
 }
 
 .carousel-item .buy-button a{
@@ -1071,12 +1076,24 @@ font-weight: 700;
 line-height: 78.682%; /* 19.67px */
 }
 
-
-/* Additional styling for the vertical line */
-
 @media (max-width: 768px) {
-    #Events .col-sm-4{
+  #Events {
+    height: auto;
+  }
+  
+  #Events .carousel-item img{
+    height: auto;
+    width: 100%;
+    background-size: cover;
+    position: relative;
+    z-index: -1;
+  }
+  #Events .col-sm-4{
     padding: 20px;
+    height: auto;
+  }
+  #Events .col-sm-8{
+  
     height: auto;
   }
 
@@ -1098,34 +1115,13 @@ line-height: 78.682%; /* 19.67px */
     padding-bottom: 20px;
     width: 100%;
   }
-
-  .slide-text {
-    width: 100%; /* Make it full width on smaller screens */
-    left: 0; /* Reset horizontal position */
-    text-align:left; /* Center align text */
-    padding: 10px 20px; /* Adjust padding for better readability */
+  #Events .carousel-indicators {
+    left: 20px;
+    bottom: 20px; 
   }
 
-  .slide {
-    height: auto;
-  }
-
-  .slide-text h2 {
-    font-size: 18px; /* Decrease font size for smaller screens */
-  }
-
-  .slide-text h3 {
-    font-size: 10px; /* Decrease font size for smaller screens */
-  }
-
-  .slide-text h4 {
-    font-size: 10px; /* Decrease font size for smaller screens */
-  }
-  .slide-line{
-    width: 350px;
-  }
 }
-/* Styles for the slide button */
+
 
 
 /*--------------------------------------------------------------
@@ -1168,9 +1164,18 @@ padding-top: 10px;/* 28.42px */
 #Advertise .button{
 border-radius: 0px 25px;
 background: #EF2F2F;
-width: 490px;
-
-margin-top: 50px;
+width: 300px;
+height: 54px;
+margin-left: 100px;
+margin-top:100px;
+padding: 15px;
+color: #FFF;
+text-align: center;
+font-family: Poppins;
+font-size: 20px;
+font-style: normal;
+font-weight: 700;
+line-height: 113.682%; /* 28.42px */
 }
 
 #Advertise .col {
@@ -1178,53 +1183,29 @@ display: flex;
 }
 
 
-#Advertise .button-container {
-  justify-content: flex-end;
-  align-items: center;
-  height: 100%;
-  padding-left: 150px;
-  padding-top: 100px;
-  width: 490px;
-  padding: 15px ;
-}
-
-#Advertise .button-container a {
-  color: #FFF;
-  text-align: center;
-  font-family: Poppins;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 113.682%; /* 28.42px */
-  padding: 15px;
-}
 
 @media (max-width: 768px) {
   #Advertise .col{
     flex-direction: column;
     padding: 0px;
+    height: auto;
   }
 
-  #Advertise .col-md-12{
+
+  #Advertise .button{
+    margin-left: 45px;
+    margin-top: 20px;
+    font-size: 18px;
+    width: 300px;
+    height: 54px;
   
+
   }
-  #Advertise .button-container{
-    padding: 0px;
-    padding-left: 50px;
-    bottom: 50px;
-  }
-  #Advertise .button-container a {
-    color: #FFF;
-    text-align: center;
-    font-family: Poppins;
-    font-size: 15px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 113.682%; /* 28.42px */
-    padding: 10px;
+  #Advertise .typography {
+    padding-bottom: 10px;
   }
   #Advertise .typography h2 {
-    font-size: 20px;
+    font-size: 25px;
   }
 
   #Advertise .typography p {
@@ -1232,9 +1213,7 @@ display: flex;
     padding-top: 5px;
   }
 
-  #Advertise .col .button {
-    margin-top: 30px;
-  }
+  
 }
 /*--------------------------------------------------------------
 #Donate
@@ -1433,7 +1412,7 @@ width: 400px;
 .member-btn {
   background: linear-gradient(180deg, #FFF09F 0%, #FFD600 63.54%);
   border-radius: 0px 25px;
-  width: 208px;
+  width:408px;
   height: 33px;
   margin-top: 30px;
   padding: 8px 24px;
@@ -1446,7 +1425,7 @@ width: 400px;
 }
 
 .member-btn:hover {
-  background: #8a8a8a;
+  background: #172b7b;
   color: #ffffff;
 }
 
@@ -1518,6 +1497,7 @@ line-height: 184.182%; /* 25.785px */
   height: 46px;
   margin-top: 20px;
   text-align: left;
+  padding: 15px 20px;
 }
 .shop-image{
   position: absolute;
@@ -1635,11 +1615,11 @@ line-height: 184.182%;
 
 #Subscribe .grid-container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Three columns with equal width */
-  grid-gap: 10px; /* Adjust the gap between items as needed */
-  grid-template-rows: repeat(2, auto); /* Two rows with automatic height */
-  max-width: 800px; /* Set a maximum width for the grid */
-  margin: 0; /* Center the grid horizontally */
+  grid-template-columns: repeat(2, 1fr); 
+  grid-gap: 10px;
+  grid-template-rows: repeat(2, auto); 
+  max-width: 800px; 
+  margin: 0; 
   padding-top: 50px;
  }
 
@@ -1721,7 +1701,8 @@ footer{
 footer .content{
   max-width: 1250px;
   margin: auto;
-  padding: 40px;;
+  padding: 40px;
+ 
 }
 
 footer .content .top{
@@ -1738,9 +1719,21 @@ footer .content .top{
 .content .top .media-icons{
   display: flex;
 }
-
+.content .top .media-icons p{
+  color: #000;
+text-align: justify;
+font-family: Poppins;
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+width: 111px;
+height: 19px;
+flex-shrink: 0;
+padding-top: 10px;
+}
 .content .top .media-icons a{
-  height: 40px;
+  height: 30px;
   width: 40px;
   margin: 0 8px;
   border-radius: 50%;
@@ -1758,6 +1751,7 @@ footer .content .link-boxes{
   width: 100%;
   display: flex;
   justify-content: space-between;
+  
 }
 
 footer .content .link-boxes .box{
@@ -1860,14 +1854,20 @@ footer .bottom-details .bottom_text{
   }
   
   .content .top .logo-details{
-    font-size: 26px;
+    font-size: 46px;
   }
   
   .content .top .media-icons a{
     height: 35px;
-    width: 35px;
+    width:35px;
     font-size: 14px;
     line-height: 35px;
+    font-size: 12px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+  }
+  .content .top .media-icons p{
+    display: none;
   }
   
   footer .content .link-boxes .box{
